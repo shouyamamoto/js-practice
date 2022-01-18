@@ -8,8 +8,19 @@ Object.preventExtensions(obj);
 console.log(Object.isExtensible(obj)); // false
 Object.keys(obj) // [ 'x', 'y' ]
 
+// let obj2 = {
+//   x: 100,
+//   y: 200,
+//   z: {
+//     a: "moriken"
+//   }
+// }
+// Object.preventExtensions(obj2);
+// console.log(Object.isExtensible(obj2), Object.isExtensible(obj2.z)); //false true
+
 /*
   Object.preventExtensions()
+  オブジェクトへの追加（拡張）を防ぐ。既存のプロパティを変更・削除することは可能。
 
   Object.seal()
   https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/seal
